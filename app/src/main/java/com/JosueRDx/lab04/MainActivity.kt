@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,6 +43,7 @@ fun MainScreen() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         RadioButtonExample()
+        CheckboxExample()
     }
 
 }
@@ -52,6 +54,14 @@ fun RadioButtonExample() {
 
     RadioButton(selected = selected, onClick = { selected = !selected })
     Text(text = "RadioButton")
+}
+
+@Composable
+fun CheckboxExample() {
+    var checked by remember { mutableStateOf(false) }
+
+    Checkbox(checked = checked, onCheckedChange = { checked = it })
+    Text(text = "Checkbox")
 }
 
 @Preview(showBackground = true)
