@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,6 +45,7 @@ fun MainScreen() {
     ) {
         RadioButtonExample()
         CheckboxExample()
+        DividerControl()
     }
 
 }
@@ -62,6 +64,11 @@ fun CheckboxExample() {
 
     Checkbox(checked = checked, onCheckedChange = { checked = it })
     Text(text = "Checkbox")
+}
+
+@Composable
+fun DividerControl() {
+    HorizontalDivider(thickness = 5.dp)
 }
 
 @Preview(showBackground = true)
