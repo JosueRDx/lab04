@@ -56,8 +56,12 @@ fun RadioButtonExample() {
     var selected by remember { mutableStateOf(false) }
 
     RadioButton(selected = selected, onClick = { selected = !selected })
-    Text(text = "RadioButton")
+    Text(
+        text = "RadioButton",
+        color = Color.Blue
+    )
 }
+
 
 @Composable
 fun CheckboxExample() {
