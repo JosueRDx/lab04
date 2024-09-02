@@ -58,11 +58,7 @@ fun RadioButtonExample() {
     RadioButton(selected = selected, onClick = { selected = !selected })
     Text(
         text = "RadioButton",
-<<<<<<< HEAD
         color = Color.Red
-=======
-
->>>>>>> 7d85538104f00b534007983aa7fc78257f9b69c3
     )
 }
 
