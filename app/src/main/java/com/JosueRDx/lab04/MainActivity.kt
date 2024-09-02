@@ -68,7 +68,7 @@ fun CheckboxExample() {
     var checked by remember { mutableStateOf(false) }
 
     Checkbox(checked = checked, onCheckedChange = { checked = it })
-    Text(text = "Checkbox")
+    Text(text = "Checkbox", color = Color.Yellow)
 }
 
 @Composable
